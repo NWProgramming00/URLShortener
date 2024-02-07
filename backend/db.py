@@ -19,7 +19,7 @@ class Urls(Base):
 
 
 class DatabaseManager:
-    def __init__(self, host):
+    def __init__(self, host: str):
         self.engine = create_engine(f"sqlite:///{host}")
         self.Session = sessionmaker(bind=self.engine)
         self.create_tables()
@@ -61,5 +61,5 @@ class DatabaseManager:
         return url_obj.original_url if url_obj else None
 
 
-def get_database_manager():
+def get_database_manager() -> DatabaseManager:
     return DatabaseManager(host=settings.database.host)
