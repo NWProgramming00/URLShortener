@@ -54,4 +54,5 @@ class HashingAlgorithm:
         """
         if not isinstance(text, str):
             raise TypeError("Input must be a string.")
-        return int(self.hashing_func.decode(text)[0])
+        number = self.hashing_func.decode(text)
+        return int(number[0]) if len(number) > 0 else None
