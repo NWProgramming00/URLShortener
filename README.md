@@ -20,8 +20,13 @@ The URL shortener service allows you to encode a long URL into a short URL and d
    ```bash
    git clone https://github.com/NWProgramming00/URLShortener.git
    ```
-   
 
+2. Copy example.env to .env file
+3. Configure .env according to your needs. example config is fully functional
+4. Run project using
+   ```bash
+   docker compose up -d
+   ```
 
 
 ## Research
