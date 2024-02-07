@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  url_shortener_backend:
+    container_name: url_shortener_backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    deploy:
+      resources:
+        limits:
+          memory: 1024m
+        reservations:
+          memory: 128m
+          cpus: "1"
