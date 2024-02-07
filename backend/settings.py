@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class DatabaseSettings(BaseModel):
-    host: str = 'test.db'
+    host: str = 'prod.db'
     model_config = SettingsConfigDict(env_prefix='db_')
 
 
